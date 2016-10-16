@@ -69,17 +69,17 @@ void Si1153::param_set(uint8_t loc, uint8_t val){
 
     while(1){
       
-        int cmmnd_ctr = Si1153::read_register(Si1153::I2C_ADDRESS, Si1153::RESPONSE_0, 1);
+        int cmmnd_ctr = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
       
         packet[0] = Si1153::HOSTIN_0;
         packet[1] = val;
-        Si1153::write_data(Si1153::I2C_ADDRESS, packet, sizeof(packet));
+        Si1153::write_data(Si1153::DEVICE_ADDRESS, packet, sizeof(packet));
       
         packet[0] = Si1153::COMMAND;
         packet[1] = loc | (0B10 << 6);
-        Si1153::write_data(Si1153::I2C_ADDRESS, packet, sizeof(packet));
+        Si1153::write_data(Si1153::DEVICE_ADDRESS, packet, sizeof(packet));
       
-        int r = Si1153::read_register(Si1153::I2C_ADDRESS, Si1153::RESPONSE_0, 1);
+        int r = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
       
         if(r > cmmnd_ctr){
       
@@ -101,17 +101,17 @@ int Si1153::param_query(uint8_t loc){
 
     while(1){
   
-        int cmmnd_ctr = Si1153::read_register(Si1153::I2C_ADDRESS, Si1153::RESPONSE_0, 1);
+        int cmmnd_ctr = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
       
         packet[0] = Si1153::COMMAND;
         packet[1] = loc | (0B01 << 6);
-        Si1153::write_data(Si1153::I2C_ADDRESS, packet, sizeof(packet));
+        Si1153::write_data(Si1153::DEVICE_ADDRESS, packet, sizeof(packet));
       
-        int r = Si1153::read_register(Si1153::I2C_ADDRESS, Si1153::RESPONSE_0, 1);
+        int r = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
       
         if(r > cmmnd_ctr){
 
-            result = Si1153::read_register(Si1153::I2C_ADDRESS, Si1153::RESPONSE_1, 1);
+            result = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_1, 1);
             break;
           
         }
@@ -131,13 +131,13 @@ void Si1153::send_command(uint8_t code){
 
     while(1){
   
-        int cmmnd_ctr = Si1153::read_register(Si1153::I2C_ADDRESS, Si1153::RESPONSE_0, 1);
+        int cmmnd_ctr = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
       
         packet[0] = Si1153::COMMAND;
         packet[1] = code;
-        Si1153::write_data(Si1153::I2C_ADDRESS, packet, sizeof(packet));
+        Si1153::write_data(Si1153::DEVICE_ADDRESS, packet, sizeof(packet));
       
-        int r = Si1153::read_register(Si1153::I2C_ADDRESS, Si1153::RESPONSE_0, 1);
+        int r = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
     
         if(r > cmmnd_ctr){
 
