@@ -8,6 +8,6 @@ If you have not done so already, please install the [Arduino IDE](https://www.ar
   
 1. Clone this project into a folder called Si1153. If you download the zip, rename the folder to Si1153. 
 
-2. Move the Si1153 folder to the libraries folder (create this folder if it does not exit) in your Arduino directory.
+2. Move the Si1153 folder to the libraries folder (create this folder if it does not exist) in your Arduino directory.
 
 3. Open the Arduino IDE and navigate to File -> Examples -> Si1153 -> si1153_test and run the sketch.
