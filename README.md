@@ -2,7 +2,7 @@
 
 This is an example for the Si1153 sensor from Silicon Labs. Look at the datasheet for more information: https://www.silabs.com/Support%20Documents/TechnicalDocs/Si1153.pdf
 
-How to use this code:
+###How to use this code:
 
   If you have not done so already, please install the Arduino IDE here: https://www.arduino.cc/en/Main/Software
   
