@@ -56,9 +56,9 @@ void loop() {
 
     uint8_t data[3];
 
-    data[0] = si1153.read_register(Si1153::I2C_ADDRESS, Si1153::HOSTOUT_0, 1);
-    data[1] = si1153.read_register(Si1153::I2C_ADDRESS, Si1153::HOSTOUT_1, 1);
-    data[2] = si1153.read_register(Si1153::I2C_ADDRESS, Si1153::HOSTOUT_2, 1);
+    data[0] = si1153.read_register(Si1153::DEVICE_ADDRESS, Si1153::HOSTOUT_0, 1);
+    data[1] = si1153.read_register(Si1153::DEVICE_ADDRESS, Si1153::HOSTOUT_1, 1);
+    data[2] = si1153.read_register(Si1153::DEVICE_ADDRESS, Si1153::HOSTOUT_2, 1);
 
     Serial.println(si1153.get_int_from_bytes(data, sizeof(data)));
     
