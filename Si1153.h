@@ -137,8 +137,6 @@ class Si1153
 			
 		} ParameterAddress;
 
-
 };
 
 #endif
-
