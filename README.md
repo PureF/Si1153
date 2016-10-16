@@ -6,7 +6,7 @@ If you have not done so already, please install the [Arduino IDE](https://www.ar
 
 ###How to use this code:
   
-1. Clone this project into a folder called Si1153. If you download the zip, rename the folder to Si1153. 
+1. Clone this repository into a folder called Si1153. If you download the .zip file, rename the folder to Si1153. 
 
 2. Move the Si1153 folder to the libraries folder (create this folder if it does not exist) in your Arduino directory.
 
