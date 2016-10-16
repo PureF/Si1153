@@ -11,5 +11,4 @@ If you have not done so already, please install the Arduino IDE here: https://ww
 2. Move the Si1153 folder to the libraries folder (create this folder if it does not exit) in your Arduino directory.
 
 3. Open the Arduino IDE and navigate to File -> Examples -> Si1153 -> si1153_test and run the sketch.
-  
-* Alternatively, open the Arduino example (found in the examples folder) in the Arduino IDE and run the sketch.
+
