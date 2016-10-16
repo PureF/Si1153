@@ -1,6 +1,6 @@
 # Si1153
 
-This is an example for the Si1153 sensor from Silicon Labs. Look at the [Si1153 Datasheet](https://www.silabs.com/Support%20Documents/TechnicalDocs/Si1153.pdf) for more information.
+This is an Arduino library for the Si1153 sensor from Silicon Labs. Look at the [Si1153 Datasheet](https://www.silabs.com/Support%20Documents/TechnicalDocs/Si1153.pdf) for more information.
 
 If you have not done so already, please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
