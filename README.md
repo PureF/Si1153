@@ -12,4 +12,4 @@ If you have not done so already, please install the Arduino IDE here: https://ww
 
 3. Open the Arduino IDE and navigate to File -> Examples -> Si1153 -> si1153_test and run the sketch.
   
-Alternatively, open the Arduino example (found in the examples folder) in the Arduino IDE and run the sketch.
+*Alternatively, open the Arduino example (found in the examples folder) in the Arduino IDE and run the sketch.
