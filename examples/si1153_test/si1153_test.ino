@@ -62,4 +62,5 @@ void loop() {
 
     Serial.println(si1153.get_int_from_bytes(data, sizeof(data)));
     
+    delay(100);
 }
