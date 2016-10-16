@@ -10,4 +10,4 @@ Please clone this project into a repo named Si1153. If you download the zip, mak
 Move the Si1153 folder the libraries folder (create this folder if it does not exit) in your Arduino directory.
 Open the Arduino IDE and navigate to File -> Examples -> Si1153 -> si1153_test and run the sketch.
   
-Alternatively, open the Arduino example, found in the examples folder, in the Arduino IDE and run the sketch.
+Alternatively, open the Arduino example (found in the examples folder) in the Arduino IDE and run the sketch.
