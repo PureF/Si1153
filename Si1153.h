@@ -1,8 +1,8 @@
 #ifndef SI1153_H
 #define SI1153_H
 
-#include "Arduino.h"
-#include "Wire.h"
+#include <Arduino.h>
+#include <Wire.h>
 
 class Si1153
 {
