@@ -15,7 +15,7 @@ void setup() {
     // Configure CHAN_LIST, enable channel 1 and 3
     si1153.param_set(Si1153::CHAN_LIST, 0B001010 >> 2);
 
-    /**
+    /*
      * Configure timing parameters
      */
     si1153.param_set(Si1153::MEASRATE_H, 0);
