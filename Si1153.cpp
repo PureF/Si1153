@@ -45,7 +45,7 @@ void Si1153::write_data(uint8_t addr, uint8_t *data, int len){
  */
 int Si1153::read_register(uint8_t addr, uint8_t reg, int bytesOfData){
   
-    int val = 0;
+    int val = -1;
   
     Si1153::write_data(addr, &reg, sizeof(reg));
     Wire.requestFrom(addr, bytesOfData);
