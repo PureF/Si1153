@@ -32,7 +32,7 @@ void Si1153::config_channel(uint8_t index, uint8_t *conf){
 /**
  * Writes data over i2c
  */
-void Si1153::write_data(uint8_t addr, uint8_t *data, int len){
+void Si1153::write_data(uint8_t addr, uint8_t *data, size_t len){
 
     Wire.beginTransmission(addr);
     Wire.write(data, len);
