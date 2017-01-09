@@ -131,7 +131,7 @@ class Si1153
 		
 		Si1153();
 		void config_channel(uint8_t index, uint8_t *conf);
-		void write_data(uint8_t addr, uint8_t *data, int len);
+		void write_data(uint8_t addr, uint8_t *data, size_t len);
 		int read_register(uint8_t addr, uint8_t reg, int bytesOfData);
 		void param_set(uint8_t loc, uint8_t val);
 		int param_query(uint8_t loc);
