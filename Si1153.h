@@ -7,25 +7,19 @@
 class Si1153
 {
 	public:
-	
 		typedef enum {
-			
 			DEVICE_ADDRESS = 0x53			
-
 		} UnitAddress;
 
 		typedef enum {
-		
 			RESET_CMD_CTR = 0x00,
 			RESET_SW = 0x01,
 			FORCE = 0x11,
 			PAUSE = 0x12,
 			START = 0x13
-
 		} CommandCodes;
 		
-		typedef enum {
-			
+		typedef enum {	
 			PART_ID = 0x00,
 			REV_ID = 0x01,
 			MFR_ID = 0x02,
@@ -67,11 +61,9 @@ class Si1153
 			HOSTOUT_23 = 0x2A,
 			HOSTOUT_24 = 0x2B,
 			HOSTOUT_25 = 0x2C	
-	
 		} RegisterAddress;
 
 		typedef enum {		
-	
 			I2C_ADDR = 0x00,
 			CHAN_LIST = 0x01,
 
@@ -125,8 +117,7 @@ class Si1153
 			THRESHOLD2_H = 0x29,
 			THRESHOLD2_L = 0x2A,
 
-			BURST = 0x2B
-			
+			BURST = 0x2B			
 		} ParameterAddress;
 		
 		Si1153();
