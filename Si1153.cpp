@@ -42,6 +42,7 @@ int Si1153::read_register(uint8_t addr, uint8_t reg, int bytesOfData){
   
     if(Wire.available())
       val = Wire.read();
+	
     return val;
 }
 
