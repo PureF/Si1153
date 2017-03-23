@@ -11,11 +11,8 @@ Si1153::Si1153() {
 void Si1153::config_channel(uint8_t index, uint8_t *conf){
     int len = sizeof(conf);
   
-    if(len != 4 || index < 0 || index > 5){
-
+    if(len != 4 || index < 0 || index > 5)
       return;
-        
-    }
 
     int inc = index * len;
     
