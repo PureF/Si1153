@@ -30,7 +30,6 @@ void setup() {
     conf[1] = 0B00000010, 
     conf[2] = 0B01000000;
     conf[3] = 0B01000001;
-    
     si1153.config_channel(1, conf);
 
     /*
@@ -40,7 +39,6 @@ void setup() {
     conf[1] = 0B00000011, 
     conf[2] = 0B01000000;
     conf[3] = 0B10000001;
-
     si1153.config_channel(3, conf);
 
     // Send start command
