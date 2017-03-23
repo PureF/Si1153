@@ -6,7 +6,6 @@ Si1153 si1153;
  * Setup for configuration
  */
 void setup() {
-
     uint8_t conf[4];
   
     Wire.begin();
@@ -46,14 +45,12 @@ void setup() {
 
     // Send start command
     si1153.send_command(Si1153::START);
-    
 }
 
 /**
  * Loops and reads data from registers
  */
 void loop() {
-
     uint8_t data[3];
 
     data[0] = si1153.read_register(Si1153::DEVICE_ADDRESS, Si1153::HOSTOUT_0, 1);
