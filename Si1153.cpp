@@ -52,7 +52,7 @@ int Si1153::read_register(uint8_t addr, uint8_t reg, int bytesOfData){
 void Si1153::param_set(uint8_t loc, uint8_t val){
     uint8_t packet[2];
 
-    while(1){
+    do{
         int cmmnd_ctr = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
       
         packet[0] = Si1153::HOSTIN_0;
@@ -64,9 +64,8 @@ void Si1153::param_set(uint8_t loc, uint8_t val){
         Si1153::write_data(Si1153::DEVICE_ADDRESS, packet, sizeof(packet));
       
         int r = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
-        if(r > cmmnd_ctr)
-            break;
-    } 
+	    
+    } while(r > cmmnd_ctr); 
 }
 
 /**
@@ -76,7 +75,7 @@ int Si1153::param_query(uint8_t loc){
     int result = -1;
     uint8_t packet[2];
 
-    while(1){
+    do{
         int cmmnd_ctr = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
 	    
         packet[0] = Si1153::COMMAND;
@@ -85,11 +84,11 @@ int Si1153::param_query(uint8_t loc){
         Si1153::write_data(Si1153::DEVICE_ADDRESS, packet, sizeof(packet));
 	    
         int r = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
-        if(r > cmmnd_ctr){
-            result = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_1, 1);
-            break;
-        }
-    }
+      
+    } while(r > cmmnd_ctr);
+	
+    result = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_1, 1);
+	
     return result;
 }
 
@@ -99,7 +98,7 @@ int Si1153::param_query(uint8_t loc){
 void Si1153::send_command(uint8_t code){
     uint8_t packet[2];
 
-    while(1){
+    do {
         int cmmnd_ctr = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
 	    
         packet[0] = Si1153::COMMAND;
@@ -107,10 +106,9 @@ void Si1153::send_command(uint8_t code){
 	    
         Si1153::write_data(Si1153::DEVICE_ADDRESS, packet, sizeof(packet));
 	    
-        int r = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1);
-        if(r > cmmnd_ctr)
-            break;  
-    }
+        int r = Si1153::read_register(Si1153::DEVICE_ADDRESS, Si1153::RESPONSE_0, 1); 
+    
+    } while(r > cmmnd_ctr);
 }
 
 /**
